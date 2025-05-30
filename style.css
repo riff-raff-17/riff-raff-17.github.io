@@ -1,10 +1,9 @@
-/* Reset some defaults */
+/* Reset & basic layout */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
 body {
   font-family: Arial, sans-serif;
   background: #f2f7ff;
@@ -12,12 +11,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
 }
-
 .container {
   text-align: center;
-  background: #ffffff;
+  background: #fff;
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -25,18 +23,21 @@ body {
   width: 90%;
 }
 
+/* Heading */
 h1 {
   margin-bottom: 1rem;
   font-size: 1.8rem;
   color: #0055aa;
 }
 
+/* Icebreaker display */
 .icebreaker {
   min-height: 3em;
   margin: 1rem 0;
   font-size: 1.2rem;
 }
 
+/* Button */
 button {
   background: #0055aa;
   color: #fff;
@@ -47,7 +48,35 @@ button {
   cursor: pointer;
   transition: background 0.2s ease;
 }
-
 button:hover {
   background: #003f7f;
+}
+
+/* Theme navigation (on index.html) */
+.theme-nav {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+.theme-nav a {
+  text-decoration: none;
+  background: #0055aa;
+  color: white;
+  padding: .75rem;
+  border-radius: 4px;
+}
+.theme-nav a:hover {
+  background: #003f7f;
+}
+
+/* Back link on theme pages */
+.back {
+  margin-top: 1rem;
+}
+.back a {
+  color: #0055aa;
+  text-decoration: none;
+}
+.back a:hover {
+  text-decoration: underline;
 }
